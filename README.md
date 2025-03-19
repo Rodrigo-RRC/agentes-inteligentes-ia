@@ -24,17 +24,19 @@ Este é um curso completo para aprender a criar **agentes inteligentes de IA** u
 
 Cada módulo inclui teoria, exemplos práticos e exercícios interativos.
 
-## 🎯 Objetivo do Curso
+## 🎯 Objetivo do Curso  
 
-Este curso foi criado para ensinar do zero como desenvolver agentes inteligentes de IA e automatizar processos usando ferramentas gratuitas.
+Este curso foi criado para ensinar **do zero** como desenvolver **agentes inteligentes de IA** e automatizar processos usando **ferramentas gratuitas**.  
 
-Você aprenderá a:
-✅ Criar chatbots personalizados.
-✅ Integrar assistentes virtuais com APIs.
-✅ Utilizar modelos de IA open source para geração de texto.
-✅ Publicar seu curso interativo gratuitamente.
+### 📌 Você aprenderá a:  
+- ✅ Criar chatbots personalizados.  
+- ✅ Integrar assistentes virtuais com APIs.  
+- ✅ Utilizar modelos de IA *open source* para geração de texto.  
+- ✅ Publicar seu curso interativo gratuitamente.  
 
-📢 Se tiver dúvidas ou sugestões, entre em contato!
+---
 
-📌 Autor: Rodrigo Ribeiro Carvalho
-📌 Licença: MIT
+📢 **Se tiver dúvidas ou sugestões, entre em contato!**  
+
+📌 **Autor:** Rodrigo Ribeiro Carvalho  
+📌 **Licença:** MIT  
