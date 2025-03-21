@@ -13,92 +13,31 @@
     <nav>
       <ul>
         <li><a href="#modulo1">Módulo 1</a></li>
-        <li><a href="#modulo2">Módulo 2</a></li>
-        <li><a href="#modulo3">Módulo 3</a></li>
         <li><a href="#pizzabot">Bot: Pizzaria</a></li>
-        <li><a href="#imobbot">Bot: Imobiliária</a></li>
-        <li><a href="#medbot">Bot: Clínica Médica</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Módulo 1: Introdução -->
     <section id="modulo1" class="modulo">
-      <h2>Módulo 1: Introdução aos Agentes Inteligentes</h2>
-      <p>Agentes inteligentes são programas capazes de perceber o ambiente, processar dados e responder com autonomia. Neste curso, você vai aprender a criar agentes para negócios reais.</p>
-      <button onclick="mostrarExercicio('ex1')">Exercício</button>
-      <div id="ex1" class="exercicio">
-        <p>Explique com suas palavras o que é um agente inteligente e dê um exemplo.</p>
-        <textarea></textarea>
-        <button onclick="salvarResposta('ex1')">Salvar</button>
-      </div>
+      <h2>Módulo 1: Introdução</h2>
+      <p>Explique com suas palavras o que é um agente inteligente:</p>
+      <textarea id="resposta-ex1" placeholder="Digite aqui..."></textarea>
+      <button onclick="salvarResposta()">Salvar</button>
+      <p id="resposta-salva"></p>
     </section>
 
-    <!-- Módulo 2: Ambiente -->
-    <section id="modulo2" class="modulo">
-      <h2>Módulo 2: Preparando o Ambiente</h2>
-      <p>Utilizaremos Google Colab, Python, bibliotecas gratuitas e publicação via GitHub Pages. Tudo gratuito.</p>
-      <pre>
-# Verifique o Python:
-!python --version
-
-# Instale a biblioteca transformers:
-!pip install transformers
-      </pre>
-    </section>
-
-    <!-- Módulo 3: Primeiro Chatbot -->
-    <section id="modulo3" class="modulo">
-      <h2>Módulo 3: Criando seu Primeiro Chatbot</h2>
-      <pre>
-from transformers import pipeline
-
-chatbot = pipeline("text-generation", model="mistralai/Mistral-7B-Instruct")
-
-while True:
-    entrada = input("Você: ")
-    if entrada.lower() == "sair":
-        break
-    resposta = chatbot(entrada, max_length=100)[0]["generated_text"]
-    print("Bot:", resposta)
-      </pre>
-      <p>Esse código básico já cria um bot funcional usando Hugging Face.</p>
-    </section>
-
-    <!-- Bot da Pizzaria -->
     <section id="pizzabot" class="modulo">
       <h2>🤖 Bot da Pizzaria</h2>
-      <p>Simulação de atendimento com menu e resposta automática.</p>
-      <div class="chatbox" id="chat-pizza">
+      <div class="chatbox">
         <div class="mensagens" id="mensagens-pizza"></div>
-        <input type="text" placeholder="Digite seu pedido..." onkeydown="enviarMensagem(event, 'pizza')" />
-      </div>
-    </section>
-
-    <!-- Bot Imobiliária -->
-    <section id="imobbot" class="modulo">
-      <h2>🏠 Bot do Corretor de Imóveis</h2>
-      <p>Agente que apresenta um imóvel automaticamente e tira dúvidas do cliente.</p>
-      <div class="chatbox" id="chat-imob">
-        <div class="mensagens" id="mensagens-imob"></div>
-        <input type="text" placeholder="Pergunte sobre o imóvel..." onkeydown="enviarMensagem(event, 'imob')" />
-      </div>
-    </section>
-
-    <!-- Bot da Clínica Médica -->
-    <section id="medbot" class="modulo">
-      <h2>🩺 Bot da Clínica Médica</h2>
-      <p>Agente que coleta dados do paciente e sugere horários de consulta.</p>
-      <div class="chatbox" id="chat-med">
-        <div class="mensagens" id="mensagens-med"></div>
-        <input type="text" placeholder="Digite sua mensagem..." onkeydown="enviarMensagem(event, 'med')" />
+        <input type="text" id="input-pizza" placeholder="Digite sua mensagem e pressione Enter..." />
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Curso criado por Rodrigo Ribeiro Carvalho - 2025</p>
+    <p>Rodrigo Ribeiro Carvalho - 2025</p>
   </footer>
 </body>
 </html>
