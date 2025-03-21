@@ -1,180 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Completo de Agentes Inteligentes de IA</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Opcional: Você pode incluir bibliotecas para editor de código interativo, se desejar -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso de Agentes Inteligentes de IA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Curso Completo de Criação de Agentes Inteligentes de IA</h1>
+    <h1>Curso de Agentes Inteligentes de IA</h1>
     <nav>
       <ul>
         <li><a href="#modulo1">Módulo 1</a></li>
         <li><a href="#modulo2">Módulo 2</a></li>
         <li><a href="#modulo3">Módulo 3</a></li>
-        <li><a href="#modulo4">Módulo 4</a></li>
-        <li><a href="#modulo5">Módulo 5</a></li>
+        <li><a href="#pizzabot">Bot: Pizzaria</a></li>
+        <li><a href="#imobbot">Bot: Imobiliária</a></li>
+        <li><a href="#medbot">Bot: Clínica Médica</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <!-- Módulo 1: Introdução aos Agentes Inteligentes -->
-    <section id="modulo1">
+    <!-- Módulo 1: Introdução -->
+    <section id="modulo1" class="modulo">
       <h2>Módulo 1: Introdução aos Agentes Inteligentes</h2>
-      <p>
-        <strong>Objetivo:</strong> Entender o que é um agente inteligente de IA, suas aplicações e importância.
-      </p>
-      <p>
-        Um <em>agente inteligente</em> é um sistema que utiliza algoritmos de inteligência artificial para interpretar dados, interagir com usuários e executar tarefas de forma autônoma. Exemplos comuns incluem chatbots, assistentes virtuais e sistemas de recomendação.
-      </p>
-      <p>
-        <strong>Aplicações:</strong> 
-        <ul>
-          <li><em>Saúde:</em> Assistentes que auxiliam na triagem de pacientes e agendamento de consultas.</li>
-          <li><em>Alimentação:</em> Sistemas para receber pedidos em pizzarias e lanchonetes.</li>
-          <li><em>Atendimento:</em> Secretárias virtuais para diversas áreas (médicos, imobiliárias, etc.).</li>
-        </ul>
-      </p>
-      <button onclick="toggleExercicio('modulo1')">Mostrar Exercício</button>
-      <div id="exercicio-modulo1" class="exercicio" style="display:none;">
-        <p><strong>Exercício:</strong> Explique com suas palavras o que é um agente inteligente e cite uma aplicação prática que você considere relevante.</p>
-        <textarea placeholder="Digite sua resposta aqui..."></textarea>
-        <button onclick="salvarExercicio('modulo1')">Salvar Resposta</button>
+      <p>Agentes inteligentes são programas capazes de perceber o ambiente, processar dados e responder com autonomia. Neste curso, você vai aprender a criar agentes para negócios reais.</p>
+      <button onclick="mostrarExercicio('ex1')">Exercício</button>
+      <div id="ex1" class="exercicio">
+        <p>Explique com suas palavras o que é um agente inteligente e dê um exemplo.</p>
+        <textarea></textarea>
+        <button onclick="salvarResposta('ex1')">Salvar</button>
       </div>
     </section>
-    
-    <!-- Módulo 2: Fundamentos de IA e NLP -->
-    <section id="modulo2">
-      <h2>Módulo 2: Fundamentos de Inteligência Artificial e NLP</h2>
-      <p>
-        <strong>Conceitos Básicos:</strong> 
-        A inteligência artificial (IA) engloba métodos que permitem às máquinas aprender e tomar decisões. Dentro da IA, o <em>Machine Learning</em> e o <em>Deep Learning</em> são técnicas que possibilitam o reconhecimento de padrões e a tomada de decisões com base em dados.
-      </p>
-      <p>
-        <strong>Processamento de Linguagem Natural (NLP):</strong> 
-        É a área da IA que trata da interação entre computadores e linguagem humana. O NLP permite a análise, interpretação e geração de linguagem de forma natural. Exemplos de aplicações incluem tradutores automáticos, chatbots e sistemas de análise de sentimento.
-      </p>
-      <p>
-        <strong>Ferramentas e Modelos Gratuitos:</strong>
-        <ul>
-          <li><em>Hugging Face Transformers:</em> Biblioteca para utilizar modelos de linguagem pré-treinados.</li>
-          <li><em>Mistral-7B-Instruct e LLaMA:</em> Modelos open source para geração de texto.</li>
-          <li><em>Google Colab:</em> Ambiente gratuito para execução de código Python.</li>
-        </ul>
-      </p>
-      <button onclick="toggleExercicio('modulo2')">Mostrar Exercício</button>
-      <div id="exercicio-modulo2" class="exercicio" style="display:none;">
-        <p><strong>Exercício:</strong> Liste duas aplicações práticas do NLP e explique brevemente por que elas são importantes para os negócios.</p>
-        <textarea placeholder="Digite sua resposta aqui..."></textarea>
-        <button onclick="salvarExercicio('modulo2')">Salvar Resposta</button>
-      </div>
+
+    <!-- Módulo 2: Ambiente -->
+    <section id="modulo2" class="modulo">
+      <h2>Módulo 2: Preparando o Ambiente</h2>
+      <p>Utilizaremos Google Colab, Python, bibliotecas gratuitas e publicação via GitHub Pages. Tudo gratuito.</p>
+      <pre>
+# Verifique o Python:
+!python --version
+
+# Instale a biblioteca transformers:
+!pip install transformers
+      </pre>
     </section>
-    
-    <!-- Módulo 3: Configuração do Ambiente e GitHub Pages -->
-    <section id="modulo3">
-      <h2>Módulo 3: Configuração do Ambiente e Publicação com GitHub Pages</h2>
-      <p>
-        <strong>Objetivo:</strong> Preparar seu ambiente de desenvolvimento e publicar seu curso online.
-      </p>
-      <p>
-        <strong>Passos:</strong>
-        <ol>
-          <li>Instale o <em>Python 3</em> e um editor de código (por exemplo, VS Code).</li>
-          <li>Instale o <em>Git</em> para controle de versão e crie uma conta no GitHub.</li>
-          <li>Crie um novo repositório no GitHub (ex.: <code>agentes-inteligentes-ia</code>).</li>
-          <li>Adicione os arquivos do curso (<code>index.html</code>, <code>styles.css</code>, <code>script.js</code>).</li>
-          <li>Ative o GitHub Pages nas configurações do repositório e publique o site.</li>
-        </ol>
-      </p>
-      <button onclick="toggleExercicio('modulo3')">Mostrar Exercício</button>
-      <div id="exercicio-modulo3" class="exercicio" style="display:none;">
-        <p><strong>Exercício:</strong> Descreva, em suas próprias palavras, os passos que você seguiu para configurar o ambiente e publicar o site no GitHub Pages.</p>
-        <textarea placeholder="Digite sua resposta aqui..."></textarea>
-        <button onclick="salvarExercicio('modulo3')">Salvar Resposta</button>
-      </div>
-    </section>
-    
-    <!-- Módulo 4: Desenvolvimento do Primeiro Chatbot -->
-    <section id="modulo4">
-      <h2>Módulo 4: Desenvolvendo Seu Primeiro Chatbot com Hugging Face</h2>
-      <p>
-        <strong>Objetivo:</strong> Criar um agente inteligente simples usando a biblioteca <code>transformers</code>.
-      </p>
-      <p>
-        <strong>Explicação:</strong>  
-        Usaremos a função <code>pipeline</code> da biblioteca Hugging Face para gerar texto a partir de um modelo pré-treinado. O código a seguir ilustra como criar um chatbot que interage via linha de comando.
-      </p>
-      <pre class="codigo">
+
+    <!-- Módulo 3: Primeiro Chatbot -->
+    <section id="modulo3" class="modulo">
+      <h2>Módulo 3: Criando seu Primeiro Chatbot</h2>
+      <pre>
 from transformers import pipeline
 
-# Inicializa o pipeline para geração de texto usando um modelo gratuito
 chatbot = pipeline("text-generation", model="mistralai/Mistral-7B-Instruct")
 
 while True:
-    pergunta = input("Você: ")
-    if pergunta.lower() == "sair":
-        print("Até mais!")
+    entrada = input("Você: ")
+    if entrada.lower() == "sair":
         break
-    resposta = chatbot(pergunta, max_length=200)[0]["generated_text"]
+    resposta = chatbot(entrada, max_length=100)[0]["generated_text"]
     print("Bot:", resposta)
       </pre>
-      <p>
-        <strong>Detalhamento:</strong>  
-        - <code>pipeline("text-generation")</code> cria um ambiente para gerar texto com base no modelo escolhido.  
-        - O loop <code>while</code> permite interagir continuamente com o usuário, e o comando <code>if pergunta.lower() == "sair"</code> interrompe a execução.  
-        - <code>max_length</code> define o tamanho máximo da resposta gerada.
-      </p>
-      <button onclick="toggleExercicio('modulo4')">Mostrar Exercício</button>
-      <div id="exercicio-modulo4" class="exercicio" style="display:none;">
-        <p><strong>Exercício:</strong> Explique detalhadamente o funcionamento do código acima. Em seguida, modifique-o para que todas as conversas sejam salvas em um arquivo <code>log.txt</code>.</p>
-        <textarea placeholder="Digite sua resposta aqui..."></textarea>
-        <button onclick="salvarExercicio('modulo4')">Salvar Resposta</button>
+      <p>Esse código básico já cria um bot funcional usando Hugging Face.</p>
+    </section>
+
+    <!-- Bot da Pizzaria -->
+    <section id="pizzabot" class="modulo">
+      <h2>🤖 Bot da Pizzaria</h2>
+      <p>Simulação de atendimento com menu e resposta automática.</p>
+      <div class="chatbox" id="chat-pizza">
+        <div class="mensagens" id="mensagens-pizza"></div>
+        <input type="text" placeholder="Digite seu pedido..." onkeydown="enviarMensagem(event, 'pizza')" />
       </div>
     </section>
-    
-    <!-- Módulo 5: Integração com APIs e Projetos Práticos -->
-    <section id="modulo5">
-      <h2>Módulo 5: Integração com APIs e Projetos Práticos</h2>
-      <p>
-        <strong>Objetivo:</strong> Aprender a integrar seu chatbot com outras aplicações e planejar projetos reais.
-      </p>
-      <p>
-        <strong>Conteúdo:</strong>
-        <ul>
-          <li>
-            <em>Integração com APIs:</em> Aprenda a conectar seu agente a serviços externos (por exemplo, para enviar mensagens via WhatsApp usando ferramentas gratuitas como ZapFree).
-          </li>
-          <li>
-            <em>Projetos Práticos:</em> Desenvolva projetos reais, como:
-            <ul>
-              <li>Uma secretária de IA para consultórios médicos.</li>
-              <li>Um agente de pedidos para pizzarias ou lanchonetes.</li>
-              <li>Assistentes virtuais para áreas de atendimento ao cliente.</li>
-            </ul>
-          </li>
-          <li>
-            <em>Planejamento de Projetos:</em> Estruture um projeto desde a concepção até a implementação, identificando os requisitos e as tecnologias necessárias.
-          </li>
-        </ul>
-      </p>
-      <button onclick="toggleExercicio('modulo5')">Mostrar Exercício</button>
-      <div id="exercicio-modulo5" class="exercicio" style="display:none;">
-        <p><strong>Exercício:</strong> Elabore um plano para desenvolver um agente inteligente voltado para [escolha um setor: por exemplo, saúde ou alimentação]. Descreva quais APIs utilizar, como será a interação com o usuário e quais ferramentas gratuitas serão empregadas.</p>
-        <textarea placeholder="Digite sua resposta aqui..."></textarea>
-        <button onclick="salvarExercicio('modulo5')">Salvar Resposta</button>
+
+    <!-- Bot Imobiliária -->
+    <section id="imobbot" class="modulo">
+      <h2>🏠 Bot do Corretor de Imóveis</h2>
+      <p>Agente que apresenta um imóvel automaticamente e tira dúvidas do cliente.</p>
+      <div class="chatbox" id="chat-imob">
+        <div class="mensagens" id="mensagens-imob"></div>
+        <input type="text" placeholder="Pergunte sobre o imóvel..." onkeydown="enviarMensagem(event, 'imob')" />
       </div>
     </section>
-    
+
+    <!-- Bot da Clínica Médica -->
+    <section id="medbot" class="modulo">
+      <h2>🩺 Bot da Clínica Médica</h2>
+      <p>Agente que coleta dados do paciente e sugere horários de consulta.</p>
+      <div class="chatbox" id="chat-med">
+        <div class="mensagens" id="mensagens-med"></div>
+        <input type="text" placeholder="Digite sua mensagem..." onkeydown="enviarMensagem(event, 'med')" />
+      </div>
+    </section>
   </main>
-  
+
   <footer>
-    <p>&copy; 2025 Rodrigo - Curso de Agentes Inteligentes de IA</p>
+    <p>Curso criado por Rodrigo Ribeiro Carvalho - 2025</p>
   </footer>
-  
-  <script src="script.js"></script>
 </body>
 </html>
